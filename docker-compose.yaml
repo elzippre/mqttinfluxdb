@@ -26,9 +26,3 @@ services:
       - 8125:8125/udp
     networks:
       - mosquitto
-
-
-networks:
-  mosquitto-net:
-    name: moquitto
-    external: true
