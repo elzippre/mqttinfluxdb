@@ -10,7 +10,7 @@ services:
     ports:
       - 8086:8086
     networks:
-      - mosquitto
+      - mosquitto-net
 
   telegraf:
     image: telegraf
@@ -25,4 +25,8 @@ services:
     ports:
       - 8125:8125/udp
     networks:
-      - mosquitto
+      - mosquitto-net
+networks:
+  mosquitto-net:
+    name: mosquitto
+    external: true
