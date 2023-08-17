@@ -10,7 +10,7 @@ services:
     ports:
       - 8086:8086
     networks:
-      - mosquitto-net
+      - mosquitto
 
   telegraf:
     image: telegraf
@@ -30,5 +30,5 @@ services:
 
 networks:
   mosquitto-net:
-    name: node-red
+    name: moquitto
     external: true
